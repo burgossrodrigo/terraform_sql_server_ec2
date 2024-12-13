@@ -1,6 +1,6 @@
 resource "aws_instance" "mysql_server" {
   ami           = "ami-02f3f602d23f1659d"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
   tags = {
     ambiente = "dev"
     Name     = "mysql_server"

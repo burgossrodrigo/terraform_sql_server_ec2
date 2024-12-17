@@ -11,6 +11,7 @@ resource "aws_instance" "mysql_server" {
   ipv6_address_count          = 1
 
   vpc_security_group_ids = [aws_security_group.docker_sql_server_sg.id]
+  iam_instance_profile   = aws_iam_role.s3-sql-server.name
 
   root_block_device {
     volume_size = 10
